@@ -1,0 +1,20 @@
+@import "tailwindcss";
+@import "flowbite-react/plugin/tailwindcss";
+@source "../.flowbite-react/class-list.json";
+
+@theme {
+  --font-sans: "DM Sans", ui-sans-serif, system-ui, sans-serif;
+}
+
+:root {
+  --primary-50: #fff4ed;
+  --primary-100: #ffe6d5;
+  --primary-200: #ffc9a9;
+  --primary-300: #ffa572;
+  --primary-400: #ff8442;
+  --primary-500: #ff6a13;
+  --primary-600: #f05106;
+  --primary-700: #c73c07;
+  --primary-800: #9e300e;
+  --primary-900: #7f2a10;
+}
