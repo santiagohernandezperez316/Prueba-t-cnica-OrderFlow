@@ -1,0 +1,15 @@
+.env
+
+# .NET build artifacts
+bin/
+obj/
+*.user
+.vs/
+.idea/
+TestResults/
+
+# Node / frontend build artifacts
+node_modules/
+dist/
+dist-ssr/
+*.local
