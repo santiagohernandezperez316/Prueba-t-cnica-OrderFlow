@@ -1,0 +1,13 @@
+<Solution>
+  <Folder Name="/Solution Items/">
+    <File Path=".editorconfig" />
+    <File Path="Directory.Build.props" />
+    <File Path="Directory.Packages.props" />
+    <File Path="global.json" />
+  </Folder>
+  <Project Path="OrderFlow.Contracts/OrderFlow.Contracts.csproj" />
+  <Project Path="OrderFlow.Inventory.Tests/OrderFlow.Inventory.Tests.csproj" />
+  <Project Path="OrderFlow.Inventory.Worker/OrderFlow.Inventory.Worker.csproj" />
+  <Project Path="OrderFlow.Orders.Api/OrderFlow.Orders.Api.csproj" />
+  <Project Path="OrderFlow.Orders.Tests/OrderFlow.Orders.Tests.csproj" />
+</Solution>
