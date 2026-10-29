@@ -1,0 +1,13 @@
+FROM mcr.microsoft.com/dotnet/sdk:10.0
+WORKDIR /src
+COPY ["nuget.config", "global.json", "Directory.Build.props", "Directory.Packages.props", "OrderFlow.slnx", "./"]
+COPY ["OrderFlow.Contracts/OrderFlow.Contracts.csproj", "OrderFlow.Contracts/"]
+COPY ["OrderFlow.Orders.Api/OrderFlow.Orders.Api.csproj", "OrderFlow.Orders.Api/"]
+COPY ["OrderFlow.Orders.Tests/OrderFlow.Orders.Tests.csproj", "OrderFlow.Orders.Tests/"]
+COPY ["OrderFlow.Inventory.Worker/OrderFlow.Inventory.Worker.csproj", "OrderFlow.Inventory.Worker/"]
+COPY ["OrderFlow.Inventory.Tests/OrderFlow.Inventory.Tests.csproj", "OrderFlow.Inventory.Tests/"]
+RUN dotnet restore OrderFlow.slnx
+COPY . .
+RUN dotnet build OrderFlow.slnx --no-restore
+# Tests run when the container starts, not at build time: Testcontainers needs the Docker socket.
+ENTRYPOINT ["dotnet", "test", "--no-build"]
